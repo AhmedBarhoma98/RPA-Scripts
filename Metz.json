@@ -1,0 +1,85 @@
+{
+  "Name": "Metz interconnect",
+  "CreationDate": "2024-1-14",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "input.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.metz-connect.com/home/service/downloads.47.en.html",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"module-cm_accordion_9497_8fc0_8946\"]/div/div[15]",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"module-cm_accordion_9497_8fc0_8946\"]/div/div[15]",
+        "xpath=//div[15]",
+        "css=#module-cm_accordion_9497_8fc0_8946 > div > div:nth-child(15)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=id",
+      "Value": "",
+      "Targets": [
+        "name=id",
+        "xpath=//*[@id=\"[object HTMLInputElement]\"]/input[2]",
+        "xpath=//input[@name='id']",
+        "xpath=//div[3]/div/div/form/input[2]",
+        "css=#[object HTMLInputElement] > input:nth-child(2)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=id",
+      "Value": "${!col1}",
+      "Targets": [
+        "name=id",
+        "xpath=//*[@id=\"[object HTMLInputElement]\"]/input[2]",
+        "xpath=//input[@name='id']",
+        "xpath=//div[3]/div/div/form/input[2]",
+        "css=#[object HTMLInputElement] > input:nth-child(2)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[@type='submit' and @onclick=\"WGA.ajax.action({action:'7.7/form-rohs/15fa18cfee16e79c9a429e7bd3aa53cc/8SMIJWPW0Re5Tt2vSb9z5glVTR6TVOHFTDetqb1PbtBIZeuJoB2k5dBN55gNp9-79hA7QDvUBXK28zK6DFKbXttsGjNnTF0O9LFNWlr1HljKh320V4L2C9zjAnOkiMTanVD45xDQKCT10nKHdJ4WCO5walqCK_PmT1J4OT41H1gE0niObPMz5gJAYrZy7J5C7znb-X8k07jWUvkLpp4iMDF72bkd8F619s9MqAHcRHJj0h0oYOdgoDdlpHyujYQYo6MxWIe3DfS2NMHCMdwqbeGUWvPDdX8fk8y6Ia3neavXKEjs1GL1UcYC-mCNotyRM-9JztRK0A-QCeKmVrQQDSN8UvaNEjV0FpBVU3Jvg2MBUasPoZPZtQ7Jao3zPYcPXro-PJS0X_1_cwSjXZAvWaCiRXdY5X4StyzzXNmjvazZ0LjJ4jmCGxu8mi9WgH0KwUvTpfweGjqpmfzh6rc8p2j7hVjdt6JyuQTa1OyE1HRM1UEj0tBB5MAsYjuNmQIBOp3K3Iv-Qdw-wWEskR5fJDzECTZaNi6xoo94AfGdAKboR-0kqSIjcFqDlZDr-bkHbnFeGS7mO4RQHEwBsbOjSEcd_FkfjjnO64MJ9AcyXONkb1CxwMBbhCbvKOARNxHyRkprZPkPE6wKZftBytDCSQ==', id:'15fa18cfee16e79c9a429e7bd3aa53cc', graydiv:true, keepParams: true}); return false;\"]",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"[object HTMLInputElement]\"]/div/button",
+        "xpath=//button[@type='submit' and @onclick=\"WGA.ajax.action({action:'7.7/form-rohs/15fa18cfee16e79c9a429e7bd3aa53cc/8SMIJWPW0Re5Tt2vSb9z5glVTR6TVOHFTDetqb1PbtBIZeuJoB2k5dBN55gNp9-79hA7QDvUBXK28zK6DFKbXttsGjNnTF0O9LFNWlr1HljKh320V4L2C9zjAnOkiMTanVD45xDQKCT10nKHdJ4WCO5walqCK_PmT1J4OT41H1gE0niObPMz5gJAYrZy7J5C7znb-X8k07jWUvkLpp4iMDF72bkd8F619s9MqAHcRHJj0h0oYOdgoDdlpHyujYQYo6MxWIe3DfS2NMHCMdwqbeGUWvPDdX8fk8y6Ia3neavXKEjs1GL1UcYC-mCNotyRM-9JztRK0A-QCeKmVrQQDSN8UvaNEjV0FpBVU3Jvg2MBUasPoZPZtQ7Jao3zPYcPXro-PJS0X_1_cwSjXZAvWaCiRXdY5X4StyzzXNmjvazZ0LjJ4jmCGxu8mi9WgH0KwUvTpfweGjqpmfzh6rc8p2j7hVjdt6JyuQTa1OyE1HRM1UEj0tBB5MAsYjuNmQIBOp3K3Iv-Qdw-wWEskR5fJDzECTZaNi6xoo94AfGdAKboR-0kqSIjcFqDlZDr-bkHbnFeGS7mO4RQHEwBsbOjSEcd_FkfjjnO64MJ9AcyXONkb1CxwMBbhCbvKOARNxHyRkprZPkPE6wKZftBytDCSQ==', id:'15fa18cfee16e79c9a429e7bd3aa53cc', graydiv:true, keepParams: true}); return false;\"]",
+        "xpath=//div/button",
+        "css=#[object HTMLInputElement] > div > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=0",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
