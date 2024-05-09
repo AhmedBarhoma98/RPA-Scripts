@@ -1,0 +1,108 @@
+{
+  "Name": "OMRON",
+  "CreationDate": "2023-4-10",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://industrial.omron.eu/en/services-support/support/environmental-product-information?referrer=15920",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=name",
+      "Value": "${!col1}",
+      "Targets": [
+        "name=name",
+        "xpath=//*[@id=\"results-table-search\"]/form/input",
+        "xpath=//input[@name='name']",
+        "xpath=//article/div/div[2]/div/form/input",
+        "css=#results-table-search > form > input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "5",
+      "Value": "!TIMEOUT_WAIT",
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=//*[@id=\"results-container\"]/tr/td",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"results-container\"]/tr/td",
+        "xpath=//td",
+        "css=#results-container > tr > td.description"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"results-container\"]/tr/td",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"results-container\"]/tr/td[4]",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "/html/body/div[7]/main/article/div/div[2]/section/div/table/tbody/tr/td[5]/a[1]@href",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "linkText=REACh@href",
+      "Value": "d",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://industrial.omron.eu${c}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://industrial.omron.eu${d}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "Omron.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

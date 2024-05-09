@@ -1,0 +1,130 @@
+{
+  "Name": "SMC_RoHS-New",
+  "CreationDate": "2023-5-8",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "smcnew.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.smcusa.com/company/sustainability/rohs-compliance/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=companyName",
+      "Value": "SiliconExpert",
+      "Targets": [
+        "id=companyName",
+        "xpath=//*[@id=\"companyName\"]",
+        "xpath=//input[@id='companyName']",
+        "xpath=//div/div/div[2]/div/input",
+        "css=#companyName"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/div/div/div/div[2]/div/h1",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"content\"]/div/div/div/div[2]/div/h1",
+        "xpath=//h1",
+        "css=#content > div > div > div.main.col-lg-9.order-md-2.col-md-12 > div:nth-child(2) > div.col-lg-9.col-md-8.main-content > h1"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "XClick // jbfzru_dpi_96.png",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "id=rohsTextArea",
+      "Value": "STATUSOK",
+      "Targets": [
+        "id=rohsTextArea",
+        "xpath=//*[@id=\"rohsTextArea\"]",
+        "xpath=//textarea[@id='rohsTextArea']",
+        "xpath=//textarea",
+        "css=#rohsTextArea"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=rohsTextArea",
+      "Value": "${!col1} \\n ${!col2} \\n ${!col3} \\n ${!col4} \\n ${!col5} \\n ${!col6} \\n ${!col7} \\n ${!col8} \\n ${!col9} \\n ${!col10} \\n ${!col11} \\n ${!col12} \\n ${!col13} \\n ${!col14} \\n ${!col15} \\n ${!col16} \\n ${!col17} \\n ${!col18} \\n ${!col19} \\n ${!col20} \\n ${!col21} \\n ${!col22} \\n ${!col23} \\n ${!col24} \\n ${!col25} \\n ${!col26} \\n ${!col27} \\n ${!col28} \\n ${!col29} \\n ${!col30} \\n ${!col31} \\n ${!col32} \\n ${!col33} \\n ${!col34} \\n ${!col35} \\n ${!col36} \\n ${!col37} \\n ${!col38} \\n ${!col39} \\n ${!col40} \\n ${!col41} \\n ${!col42} \\n ${!col43} \\n ${!col44} \\n ${!col45} \\n ${!col46} \\n ${!col47} \\n ${!col48} \\n ${!col49}",
+      "Targets": [
+        "id=rohsTextArea",
+        "xpath=//*[@id=\"rohsTextArea\"]",
+        "xpath=//textarea[@id='rohsTextArea']",
+        "xpath=//textarea",
+        "css=#rohsTextArea"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=submitRohsTextArea",
+      "Value": "",
+      "Targets": [
+        "id=submitRohsTextArea",
+        "xpath=//*[@id=\"submitRohsTextArea\"]",
+        "xpath=//button[@id='submitRohsTextArea']",
+        "xpath=//div[2]/div/div/button",
+        "css=#submitRohsTextArea"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=downloadAll",
+      "Value": "",
+      "Targets": [
+        "id=downloadAll",
+        "xpath=//*[@id=\"downloadAll\"]",
+        "xpath=//button[@id='downloadAll']",
+        "xpath=//div[2]/button",
+        "css=#downloadAll"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "MSC-ROHS.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

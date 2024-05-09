@@ -1,0 +1,144 @@
+{
+  "Name": "MultiComp_Pro",
+  "CreationDate": "2023-4-10",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.newark.com/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "5",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=SimpleSearchForm_SearchTerm",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=SimpleSearchForm_SearchTerm",
+        "name=st",
+        "xpath=//*[@id=\"SimpleSearchForm_SearchTerm\"]",
+        "xpath=//input[@id='SimpleSearchForm_SearchTerm']",
+        "xpath=//div[2]/input[2]",
+        "css=#SimpleSearchForm_SearchTerm"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"LookAheadProdIdContainer\"]/ul/table/tbody/tr/td[2]",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"LookAheadProdIdContainer\"]/ul/table/tbody/tr/td[2]",
+        "xpath=//td[2]",
+        "css=#LookAheadProdIdContainer > ul > table > tbody > tr > td.leftcolumn"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//*[@id=\"mainPdpWrapper\"]/section/div/div[3]/div/dl/div[2]/dd/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"mainPdpWrapper\"]/section/div/div[3]/div/dl/div[2]/dd/span",
+        "xpath=//dd/span",
+        "css=#mainPdpWrapper > section.pdpEnhanceTitle > div > div.proDescAndReview > div.productDescription > dl > div:nth-child(2) > dd > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"mainPdpWrapper\"]/section/div/div[3]/div/dl/div[2]/dd/span",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "id=supplier_logo@alt",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"pdpSection_ProductLegislation\"]/div[2]/table/tbody/tr[2]/td",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"pdpSection_ProductLegislation\"]/div[2]/table/tbody/tr[4]/td/span",
+      "Value": "d",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${c}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${d}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pdpSection_ProductLegislation\"]/div[2]/table/tbody/tr[5]/td/a/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pdpSection_ProductLegislation\"]/div[2]/table/tbody/tr[5]/td/a/span",
+        "xpath=//td/a/span",
+        "css=#pdpSection_ProductLegislation > div.collapsable-content > table > tbody > tr:nth-child(5) > td > a > span.certificateRohs"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=PDF Certificate",
+      "Value": "",
+      "Targets": [
+        "linkText=PDF Certificate",
+        "xpath=//*[@id=\"pdfRoHSCertificateForm\"]/a",
+        "xpath=//a[@onclick=\"document.forms.pdfRoHSCertificateForm.submit();dijit.byId('RoHSCertificatePopup').hide();\"]",
+        "xpath=//form/a",
+        "css=#pdfRoHSCertificateForm > a"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "MC.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "Name": "EditedMC",
+  "CreationDate": "2023-2-14",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "links.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"paraSearch\"]/div[3]/div/a/span[2]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"sProdList\"]/tbody/tr/td[4]/a/p",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"sProdList\"]/tbody/tr/td[4]/a/p",
+        "xpath=//td[4]/a/p",
+        "css=#sProdList > tbody > tr:nth-child(4) > td.description.enhanceDescClmn > a > p"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"mainPdpWrapper\"]/section/div/div[3]/div/dl/div[2]/dd/span",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"pdpSection_ProductLegislation\"]/div[2]/table/tbody/tr[7]/td/span",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "ww5.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

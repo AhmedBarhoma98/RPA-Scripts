@@ -1,0 +1,108 @@
+{
+  "Name": "Amphenol_CS",
+  "CreationDate": "2023-4-10",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.amphenol-cs.com/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "5",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=search",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=search",
+        "name=q",
+        "xpath=//*[@id=\"search\"]",
+        "xpath=//input[@id='search']",
+        "xpath=//input",
+        "css=#search"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"productsList\"]/ul/li/a/div[2]/div/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"productsList\"]/ul/li/a/div[2]/div/span",
+        "xpath=//div[2]/div/span",
+        "css=#productsList > ul > li > a > div.klevu-name-desc-l2 > div.klevu-name-l2 > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"overview-content\"]/div[2]/div/h6[2]/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"overview-content\"]/div[2]/div/h6[2]/span",
+        "xpath=//h6[2]/span",
+        "css=#overview-content > div.product-info-main-overview-right > div.product_infosub_overview_left > h6.section-content-header.item.title.documentation > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"maincontent\"]/div[3]/div/div/div/div/div/div/h1/span[2]",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"overview-content\"]/div[2]/div/div[2]/div/div/p",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"overview-content\"]/div[2]/div/div[2]/div/div[2]/p",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${c}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "Amph.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

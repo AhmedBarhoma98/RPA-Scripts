@@ -1,0 +1,114 @@
+{
+  "Name": "EDAC-Latest",
+  "CreationDate": "2023-2-14",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://edac.net/certificates/reach-svhc-statement",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=part",
+      "Value": "${!col1}",
+      "Targets": [
+        "name=part",
+        "xpath=//*[@id=\"content\"]/div/div/div[2]/div/div/div/div[3]/form/input[2]",
+        "xpath=//input[@name='part']",
+        "xpath=//input[2]",
+        "css=#content > div > div.content-hold > div.content-right > div > div > div.parts-include-hold > div.parts-include > form > input.default-value.search-field"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"autoResults\"]/div/a/span",
+      "Value": "STATUSOK",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"autoResults\"]/div/span",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"autoResults\"]/div/a/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"autoResults\"]/div/a/span",
+        "xpath=//div[4]/div/div/a/span",
+        "css=#autoResults > div > a > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=Download Now",
+      "Value": "",
+      "Targets": [
+        "linkText=Download Now",
+        "xpath=//*[@id=\"content\"]/div/div/div[2]/div/div/div/a[2]",
+        "xpath=//div/div/div[2]/div/div/div/a[2]",
+        "css=#content > div > div.content-hold > div.content-right > div > div > div.parts-include-hold > a.btn.float-left"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=Clear All",
+      "Value": "",
+      "Targets": [
+        "linkText=Clear All",
+        "xpath=//*[@id=\"content\"]/div/div/div[2]/div/div/div/a",
+        "xpath=//div[2]/div/div/div[2]/div/div/div/a",
+        "css=#content > div > div.content-hold > div.content-right > div > div > div.parts-include-hold > a.clear-all"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "edesave.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

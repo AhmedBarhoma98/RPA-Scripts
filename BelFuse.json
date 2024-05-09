@@ -1,0 +1,161 @@
+{
+  "Name": "BelFuse",
+  "CreationDate": "2023-5-2",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.belfuse.com/resource-center/design-tools/rohs-compliant/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=product-number",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=product-number",
+        "name=ROHSSearch",
+        "xpath=//*[@id=\"product-number\"]",
+        "xpath=//input[@id='product-number']",
+        "xpath=//div[2]/div/input",
+        "css=#product-number"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=btnrohsSearch",
+      "Value": "",
+      "Targets": [
+        "id=btnrohsSearch",
+        "xpath=//*[@id=\"btnrohsSearch\"]",
+        "xpath=//button[@id='btnrohsSearch']",
+        "xpath=//div[2]/button",
+        "css=#btnrohsSearch"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "id=error-msg",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "belf.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"RoHSResults\"]/div/div/div/div/ul/li[5]",
+      "Value": "STATUSOK",
+      "Targets": [
+        "id=rohs-download",
+        "xpath=//*[@id=\"rohs-download\"]",
+        "xpath=//button[@id='rohs-download']",
+        "xpath=//div[2]/div/div/div/div[2]/button",
+        "css=#rohs-download"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"RoHSResults\"]/div/div/div/div/ul/li[5]",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"RoHSResults\"]/div/div/div/div/ul/li[7]",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "//*[@id=\"RoHSResults\"]/div/div/div/div[1]/ul/li[2]/a",
+      "Value": "d",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${d}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${c}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=rohs-download",
+      "Value": "",
+      "Targets": [
+        "id=rohs-download",
+        "xpath=//*[@id=\"rohs-download\"]",
+        "xpath=//button[@id='rohs-download']",
+        "xpath=//div[2]/div/div/div/div[2]/button",
+        "css=#rohs-download"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "belf.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

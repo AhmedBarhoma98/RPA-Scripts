@@ -1,0 +1,84 @@
+{
+  "Name": "NisshinBo",
+  "CreationDate": "2023-2-14",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "links.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"Main\"]/div/div[2]/section/div/div/div/div/table/tbody/tr/td[2]",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"Main\"]/div/div[2]/section/div/div/div/div/table/tbody/tr[9]/td[2]",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"Main\"]/div/div[2]/section/div/div/div/div/table/tbody/tr[7]/td[2]",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"Main\"]/div/div[2]/section/div/div/div/div/table/tbody/tr[10]/td[2]",
+      "Value": "d",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${c}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${d}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "Final.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

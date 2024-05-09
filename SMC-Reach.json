@@ -1,0 +1,148 @@
+{
+  "Name": "SMC-Reach",
+  "CreationDate": "2023-2-14",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "smc.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.smcusa.com/company/sustainability/rohsreach-certificate-request/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "selectFrame",
+      "Target": "index=0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=view:_id1:dialog1:_content:form1:inpEmail",
+      "Value": "ibrahim_gamal@siliconexpert.com",
+      "Targets": [
+        "id=view:_id1:dialog1:_content:form1:inpEmail",
+        "name=view:_id1:dialog1:_content:form1:inpEmail",
+        "xpath=//*[@id=\"view:_id1:dialog1:_content:form1:inpEmail\"]",
+        "xpath=//input[@id='view:_id1:dialog1:_content:form1:inpEmail']",
+        "xpath=//div/input",
+        "css=#view:_id1:dialog1:_content:form1:inpEmail"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=view:_id1:dialog1:_content:form1:button2",
+      "Value": "",
+      "Targets": [
+        "id=view:_id1:dialog1:_content:form1:button2",
+        "name=view:_id1:dialog1:_content:form1:button2",
+        "xpath=//*[@id=\"view:_id1:dialog1:_content:form1:button2\"]",
+        "xpath=//button[@id='view:_id1:dialog1:_content:form1:button2']",
+        "xpath=//button",
+        "css=#view:_id1:dialog1:_content:form1:button2"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=view:_id1:_id2:_id6:tabPanel1:_id7:button1",
+      "Value": "",
+      "Targets": [
+        "id=view:_id1:_id2:_id6:tabPanel1:_id7:button1",
+        "name=view:_id1:_id2:_id6:tabPanel1:_id7:button1",
+        "xpath=//*[@id=\"view:_id1:_id2:_id6:tabPanel1:_id7:button1\"]",
+        "xpath=//button[@id='view:_id1:_id2:_id6:tabPanel1:_id7:button1']",
+        "xpath=//button",
+        "css=#view:_id1:_id2:_id6:tabPanel1:_id7:button1"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=view:_id1:_id2:_id6:tabPanel2:_id64:reqPart",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=view:_id1:_id2:_id6:tabPanel2:_id64:reqPart",
+        "name=view:_id1:_id2:_id6:tabPanel2:_id64:reqPart",
+        "xpath=//*[@id=\"view:_id1:_id2:_id6:tabPanel2:_id64:reqPart\"]",
+        "xpath=//textarea[@id='view:_id1:_id2:_id6:tabPanel2:_id64:reqPart']",
+        "xpath=//textarea",
+        "css=#view:_id1:_id2:_id6:tabPanel2:_id64:reqPart"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "10",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=view:_id1:_id2:_id6:tabPanel2:_id64:button1",
+      "Value": "",
+      "Targets": [
+        "id=view:_id1:_id2:_id6:tabPanel2:_id64:button1",
+        "name=view:_id1:_id2:_id6:tabPanel2:_id64:button1",
+        "xpath=//*[@id=\"view:_id1:_id2:_id6:tabPanel2:_id64:button1\"]",
+        "xpath=//button[@id='view:_id1:_id2:_id6:tabPanel2:_id64:button1']",
+        "xpath=//button",
+        "css=#view:_id1:_id2:_id6:tabPanel2:_id64:button1"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=REACH3747348.pdf",
+      "Value": "",
+      "Targets": [
+        "linkText=REACH3747348.pdf",
+        "xpath=//*[@id=\"view:_id1:_id2:_id6:tabPanel2:_id64:dataView1:1:computedField2\"]/a",
+        "xpath=//tr[2]/td/div/div[2]/div/span/a",
+        "css=#view:_id1:_id2:_id6:tabPanel2:_id64:dataView1:1:computedField2 > a"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=1",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "return (window.location.href)",
+      "Value": "executeScript_Sandbox_result",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${executeScript_Sandbox_result}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "MSC-Reach.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

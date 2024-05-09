@@ -1,0 +1,86 @@
+{
+  "Name": "Henkel",
+  "CreationDate": "2023-3-21",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "smc.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "open // https://mysds.henkel.com/index.html",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "click // //*[@id=\"__content2\"]/div[1]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=idSearchMatnr-I",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=idSearchMatnr-I",
+        "xpath=//*[@id=\"idSearchMatnr-I\"]",
+        "xpath=//input[@id='idSearchMatnr-I']",
+        "xpath=//div[5]/div/form/input",
+        "css=#idSearchMatnr-I"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=__xmlview1--idSearchButton-content",
+      "Value": "",
+      "Targets": [
+        "id=__xmlview1--idSearchButton-content",
+        "xpath=//*[@id=\"__xmlview1--idSearchButton-content\"]",
+        "xpath=//span[@id='__xmlview1--idSearchButton-content']",
+        "xpath=//div[4]/button/span/span[2]",
+        "css=#__xmlview1--idSearchButton-content"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "//*[@class=\"sapMText sapMTextBreakWord sapMTextMaxWidth sapUiSelectable\"]",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "click // id=__xmlview1--DownloadButton-__clone0-BDI-content",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "final.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

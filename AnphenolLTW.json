@@ -1,0 +1,82 @@
+{
+  "Name": "Amphenol LTW",
+  "CreationDate": "2023-2-14",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "amphenolltw.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.amphenolltw.com/support/rohs-report/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"product-clone\"]/td[2]/span/span/span/span[2]",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"product-clone\"]/td[2]/span/span/span/span[2]",
+        "xpath=//span/span[2]",
+        "css=#product-clone > td.item-number > span > span.selection > span > span.select2-selection__arrow"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=/html/body/span/span/span/input",
+      "Value": "${!col1}",
+      "Targets": [
+        "xpath=/html/body/span/span/span/input",
+        "xpath=//span/input",
+        "css=body > span > span > span.select2-search.select2-search--dropdown > input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "10",
+      "Value": "!TIMEOUT_WAIT",
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "/html/body/span/span/span[2]/ul/li",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"rohs-report-form\"]/div/div",
+        "xpath=//form/div/div",
+        "css=#rohs-report-form > div > div"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=rohs-report-submit-btn",
+      "Value": "",
+      "Targets": [
+        "id=rohs-report-submit-btn",
+        "xpath=//*[@id=\"rohs-report-submit-btn\"]",
+        "xpath=//button[@id='rohs-report-submit-btn']",
+        "xpath=//div[3]/button",
+        "css=#rohs-report-submit-btn"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=0",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

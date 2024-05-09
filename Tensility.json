@@ -1,0 +1,86 @@
+{
+  "Name": "Tensility",
+  "CreationDate": "2023-3-21",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "msc-reach.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://tensility.com/connectors/m12-connectors/54-00212",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=q",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=q",
+        "name=q",
+        "xpath=//*[@id=\"q\"]",
+        "xpath=//input[@id='q']",
+        "xpath=//input",
+        "css=#q"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"search\"]/div/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"search\"]/div/button",
+        "xpath=//button[@type='submit']",
+        "xpath=//form/div/button",
+        "css=#search > div > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"products-list\"]/div[2]/div[1]/div[1]/div/div/div/a",
+      "Value": "",
+      "Targets": [
+        "linkText=54-00212",
+        "xpath=//*[@id=\"products-list\"]/div[2]/div/div/div/div/div/a",
+        "xpath=//div[2]/div/div/div/div/div/a",
+        "css=#products-list > div.row.product-item.pl-0.py-3 > div.col-md-8.col-sm-7 > div.row-pl-3 > div > div > div > a"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "//a[@id=\"view-compliance-doc\"]@href",
+      "Value": "executeScript_Sandbox_result",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://tensility.com${executeScript_Sandbox_result}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "final.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

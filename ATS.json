@@ -1,0 +1,76 @@
+{
+  "Name": "AQT",
+  "CreationDate": "2023-3-1",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "msc-reach.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.qats.com/RoHSCertificateGeneration.aspx",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=txtPartNumber",
+      "Value": "${!col1}",
+      "Targets": [
+        "id=txtPartNumber",
+        "name=txtPartNumber",
+        "xpath=//*[@id=\"txtPartNumber\"]",
+        "xpath=//input[@id='txtPartNumber']",
+        "xpath=//td[2]/input",
+        "css=#txtPartNumber"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=btnPartNumber",
+      "Value": "",
+      "Targets": [
+        "id=btnPartNumber",
+        "name=btnPartNumber",
+        "xpath=//*[@id=\"btnPartNumber\"]",
+        "xpath=//input[@id='btnPartNumber']",
+        "xpath=//td[3]/input",
+        "css=#btnPartNumber"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "4",
+      "Value": "!TIMEOUT_WAIT",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "//*[@id=\"dgSearch_ctl02_lnk_ManufacturingLink\"]",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "//*[@id=\"dgSearch_ctl02_lnk_Obtain_RoHS_CertificateHS\"]",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "New.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
