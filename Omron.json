@@ -1,0 +1,108 @@
+{
+  "Name": "Omron",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://industrial.omron.eu/en/services-support/support/environmental-product-information?referrer=15920",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!TIMEOUT_WAIT",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=name",
+      "Value": "${!col1}",
+      "Targets": [
+        "name=name",
+        "xpath=//*[@id=\"results-table-search\"]/form/input",
+        "xpath=//input[@name='name']",
+        "xpath=//article/div/div[2]/div/form/input",
+        "css=#results-table-search > form > input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=/html/body/div[7]/main/article/div/div[2]/rohs-reach-search/section/div/div/div/div[2]/div/div/div",
+      "Value": "",
+      "Targets": [
+        "xpath=/html/body/div[7]/main/article/div/div[2]/rohs-reach-search/section/div/div/div/div[2]/div/div/div",
+        "xpath=//div/div/div[2]/div/div/div",
+        "css=body > div.wrapper > main > article > div > div.search-wrapper.rohs-search > rohs-reach-search > section > div > div.ReactTable.clean.css-1xgm3ri > div.rt-table > div.rt-tbody > div > div > div:nth-child(1)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[7]/main/article/div/div[2]/rohs-reach-search/section/div/div/div/div[2]/div/div/div",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[7]/main/article/div/div[2]/rohs-reach-search/section/div/div/div/div[2]/div/div/div[4]/div",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "linkText=RoHS 10@href",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "linkText=REACH@href",
+      "Value": "d",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://industrial.omron.eu${c}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://industrial.omron.eu${d}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "Omron1.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

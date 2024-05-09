@@ -1,0 +1,72 @@
+{
+  "Name": "PHX",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "phx.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.phoenixcontact.com/en-ae/products/product-compliance",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!TIMEOUT_WAIT",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=pr-gpc-input",
+      "Value": "${!col1}\\n${!col2}\\n${!col3}\\n${!col4}\\n${!col5}\\n${!col6}\\n${!col7}\\n${!col8}\\n${!col9}\\n${!col10}\\n${!col11}\\n${!col12}\\n${!col13}\\n${!col14}\\n${!col15}\\n${!col16}\\n${!col17}\\n${!col18}\\n${!col19}\\n${!col20}\\n${!col21}\\n${!col22}\\n${!col23}\\n${!col24}\\n${!col25}\\n${!col26}\\n${!col27}\\n${!col28}\\n${!col29}\\n${!col30}\\n${!col31}\\n${!col32}\\n${!col33}\\n${!col34}\\n${!col35}\\n${!col36}\\n${!col37}\\n${!col38}\\n${!col39}\\n${!col40}\\n${!col41}\\n${!col42}\\n${!col43}\\n${!col44}\\n${!col45}\\n${!col46}\\n${!col47}\\n${!col48}\\n${!col49}\\n${!col50}\\n${!col51}\\n${!col52}\\n${!col53}\\n${!col54}\\n${!col55}\\n${!col56}\\n${!col57}\\n${!col58}\\n${!col59}\\n${!col60}\\n${!col61}\\n${!col62}\\n${!col63}\\n${!col64}\\n${!col65}\\n${!col66}\\n${!col67}\\n${!col68}\\n${!col69}\\n${!col70}\\n${!col71}\\n${!col72}\\n${!col73}\\n${!col74}\\n${!col75}\\n${!col76}\\n${!col77}\\n${!col78}\\n${!col79}\\n${!col80}\\n${!col81}\\n${!col82}\\n${!col83}\\n${!col84}\\n${!col85}\\n${!col86}\\n${!col87}\\n${!col88}\\n${!col89}\\n${!col90}\\n${!col91}\\n${!col92}\\n${!col93}\\n${!col94}\\n${!col95}\\n${!col96}\\n${!col97}\\n${!col98}\\n${!col99}\\n${!col100}\\n${!col101}\\n${!col102}\\n${!col103}\\n${!col104}\\n${!col105}\\n${!col106}\\n${!col107}\\n${!col108}\\n${!col109}\\n${!col110}\\n${!col111}\\n${!col112}\\n${!col113}\\n${!col114}\\n${!col115}\\n${!col116}\\n${!col117}\\n${!col118}\\n${!col119}\\n${!col120}\\n${!col121}\\n${!col122}\\n${!col123}\\n${!col124}\\n${!col125}\\n${!col126}\\n${!col127}\\n${!col128}\\n${!col129}\\n${!col130}\\n${!col131}\\n${!col132}\\n${!col133}\\n${!col134}\\n${!col135}\\n${!col136}\\n${!col137}\\n${!col138}\\n${!col139}\\n${!col140}\\n${!col141}\\n${!col142}\\n${!col143}\\n${!col144}\\n${!col145}\\n${!col146}\\n${!col147}\\n${!col148}\\n${!col149}\\n${!col150}\\n${!col151}\\n${!col152}\\n${!col153}\\n${!col154}\\n${!col155}\\n${!col156}\\n${!col157}\\n${!col158}\\n${!col159}\\n${!col160}\\n${!col161}\\n${!col162}\\n${!col163}\\n${!col164}\\n${!col165}\\n${!col166}\\n${!col167}\\n${!col168}\\n${!col169}\\n${!col170}\\n${!col171}\\n${!col172}\\n${!col173}\\n${!col174}\\n${!col175}\\n${!col176}\\n${!col177}\\n${!col178}\\n${!col179}\\n${!col180}\\n${!col181}\\n${!col182}\\n${!col183}\\n${!col184}\\n${!col185}\\n${!col186}\\n${!col187}\\n${!col188}\\n${!col189}\\n${!col190}\\n${!col191}\\n${!col192}\\n${!col193}\\n${!col194}\\n${!col195}\\n${!col196}\\n${!col197}\\n${!col198}\\n${!col199}\\n${!col200}\\n${!col201}\\n${!col202}\\n${!col203}\\n${!col204}\\n${!col205}\\n${!col206}\\n${!col207}\\n${!col208}\\n${!col209}\\n${!col210}\\n${!col211}\\n${!col212}\\n${!col213}\\n${!col214}\\n${!col215}\\n${!col216}\\n${!col217}\\n${!col218}\\n${!col219}\\n${!col220}\\n${!col221}\\n${!col222}\\n${!col223}\\n${!col224}\\n${!col225}\\n${!col226}\\n${!col227}\\n${!col228}\\n${!col229}\\n${!col230}\\n${!col231}\\n${!col232}\\n${!col233}\\n${!col234}\\n${!col235}\\n${!col236}\\n${!col237}\\n${!col238}\\n${!col239}\\n${!col240}\\n${!col241}\\n${!col242}\\n${!col243}\\n${!col244}\\n${!col245}\\n${!col246}\\n${!col247}\\n${!col248}\\n${!col249}\\n${!col250}\\n${!col251}\\n${!col252}\\n${!col253}\\n${!col254}\\n${!col255}\\n${!col256}\\n${!col257}\\n${!col258}\\n${!col259}\\n${!col260}\\n${!col261}\\n${!col262}\\n${!col263}\\n${!col264}\\n${!col265}\\n${!col266}\\n${!col267}\\n${!col268}\\n${!col269}\\n${!col270}\\n${!col271}\\n${!col272}\\n${!col273}\\n${!col274}\\n${!col275}\\n${!col276}\\n${!col277}\\n${!col278}\\n${!col279}\\n${!col280}\\n${!col281}\\n${!col282}\\n${!col283}\\n${!col284}\\n${!col285}\\n${!col286}\\n${!col287}\\n${!col288}\\n${!col289}\\n${!col290}\\n${!col291}\\n${!col292}\\n${!col293}\\n${!col294}\\n${!col295}\\n${!col296}\\n${!col297}\\n${!col298}\\n${!col299}\\n${!col300}\\n${!col301}\\n${!col302}\\n${!col303}\\n${!col304}\\n${!col305}\\n${!col306}\\n${!col307}\\n${!col308}\\n${!col309}\\n${!col310}\\n${!col311}\\n${!col312}\\n${!col313}\\n${!col314}\\n${!col315}\\n${!col316}\\n${!col317}\\n${!col318}\\n${!col319}\\n${!col320}\\n${!col321}\\n${!col322}\\n${!col323}\\n${!col324}\\n${!col325}\\n${!col326}\\n${!col327}\\n${!col328}\\n${!col329}\\n${!col330}\\n${!col331}\\n${!col332}\\n${!col333}\\n${!col334}\\n${!col335}\\n${!col336}\\n${!col337}\\n${!col338}\\n${!col339}\\n${!col340}\\n${!col341}\\n${!col342}\\n${!col343}\\n${!col344}\\n${!col345}\\n${!col346}\\n${!col347}\\n${!col348}\\n${!col349}\\n${!col350}\\n${!col351}\\n${!col352}\\n${!col353}\\n${!col354}\\n${!col355}\\n${!col356}\\n${!col357}\\n${!col358}\\n${!col359}\\n${!col360}\\n${!col361}\\n${!col362}\\n${!col363}\\n${!col364}\\n${!col365}\\n${!col366}\\n${!col367}\\n${!col368}\\n${!col369}\\n${!col370}\\n${!col371}\\n${!col372}\\n${!col373}\\n${!col374}\\n${!col375}\\n${!col376}\\n${!col377}\\n${!col378}\\n${!col379}\\n${!col380}\\n${!col381}\\n${!col382}\\n${!col383}\\n${!col384}\\n${!col385}\\n${!col386}\\n${!col387}\\n${!col388}\\n${!col389}\\n${!col390}\\n${!col391}\\n${!col392}\\n${!col393}\\n${!col394}\\n${!col395}\\n${!col396}\\n${!col397}\\n${!col398}\\n${!col399}\\n${!col400}\\n${!col401}\\n${!col402}\\n${!col403}\\n${!col404}\\n${!col405}\\n${!col406}\\n${!col407}\\n${!col408}\\n${!col409}\\n${!col410}\\n${!col411}\\n${!col412}\\n${!col413}\\n${!col414}\\n${!col415}\\n${!col416}\\n${!col417}\\n${!col418}\\n${!col419}\\n${!col420}\\n${!col421}\\n${!col422}\\n${!col423}\\n${!col424}\\n${!col425}\\n${!col426}\\n${!col427}\\n${!col428}\\n${!col429}\\n${!col430}\\n${!col431}\\n${!col432}\\n${!col433}\\n${!col434}\\n${!col435}\\n${!col436}\\n${!col437}\\n${!col438}\\n${!col439}\\n${!col440}\\n${!col441}\\n${!col442}\\n${!col443}\\n${!col444}\\n${!col445}\\n${!col446}\\n${!col447}\\n${!col448}\\n${!col449}\\n${!col450}\\n${!col451}\\n${!col452}\\n${!col453}\\n${!col454}\\n${!col455}\\n${!col456}\\n${!col457}\\n${!col458}\\n${!col459}\\n${!col460}\\n${!col461}\\n${!col462}\\n${!col463}\\n${!col464}\\n${!col465}\\n${!col466}\\n${!col467}\\n${!col468}\\n${!col469}\\n${!col470}\\n${!col471}\\n${!col472}\\n${!col473}\\n${!col474}\\n${!col475}\\n${!col476}\\n${!col477}\\n${!col478}\\n${!col479}\\n${!col480}\\n${!col481}\\n${!col482}\\n${!col483}\\n${!col484}\\n${!col485}\\n${!col486}\\n${!col487}\\n${!col488}\\n${!col489}\\n${!col490}\\n${!col491}\\n${!col492}\\n${!col493}\\n${!col494}\\n${!col495}\\n${!col496}\\n${!col497}\\n${!col498}\\n${!col499}\\n${!col500}",
+      "Targets": [
+        "id=pr-gpc-input",
+        "name=productIdsInput",
+        "xpath=//*[@id=\"pr-gpc-input\"]",
+        "xpath=//textarea[@id='pr-gpc-input']",
+        "xpath=//textarea",
+        "css=#pr-gpc-input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pr-gpc-app\"]/div/form/div[2]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pr-gpc-app\"]/div/form/div[2]/button",
+        "xpath=//form/div[2]/button",
+        "css=#pr-gpc-app > div > form > div.d-md-flex.flex-row-reverse.align-items-start > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"pr-gpc-app\"]/div[2]/div[3]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pr-gpc-app\"]/div/form/div[2]/button",
+        "xpath=//form/div[2]/button",
+        "css=#pr-gpc-app > div > form > div.d-md-flex.flex-row-reverse.align-items-start > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "qwe",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

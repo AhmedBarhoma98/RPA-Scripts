@@ -1,0 +1,72 @@
+{
+  "Name": "Infinion",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "festo.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.infineon.com/cms/en/search.html?view=all&term=#!view=products&term=${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!TIMEOUT_WAIT",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//h4/a",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "1",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeAttribute // //a[contains(span, \"MaterialContentSheet\") or contains(span, \"MCDS\")]@href",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "//a[contains(@href,\"MaterialContent\")][1]@href",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "https://www.infineon.com${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "inf1.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "TAB=CLOSE",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

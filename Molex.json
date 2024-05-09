@@ -1,0 +1,211 @@
+{
+  "Name": "Molex",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "Moll.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://tools.molex.com/molex/electrical_model/MultiPartComplianceDocuments.action?pn=",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=data2",
+      "Value": "${!col1}\\n${!col2}\\n${!col3}\\n${!col4}\\n${!col5}\\n${!col6}\\n${!col7}\\n${!col8}\\n${!col9}\\n${!col10}\\n${!col11}\\n${!col12}\\n${!col13}\\n${!col14}\\n${!col15}\\n${!col16}\\n${!col17}\\n${!col18}\\n${!col19}\\n${!col20}\\n${!col21}\\n${!col22}\\n${!col23}\\n${!col24}\\n${!col25}\\n${!col26}\\n${!col27}\\n${!col28}\\n${!col29}\\n${!col30}\\n${!col31}\\n${!col32}\\n${!col33}\\n${!col34}\\n${!col35}\\n${!col36}\\n${!col37}\\n${!col38}\\n${!col39}\\n${!col40}\\n${!col41}\\n${!col42}\\n${!col43}\\n${!col44}\\n${!col45}\\n${!col46}\\n${!col47}\\n${!col48}\\n${!col49}",
+      "Targets": [
+        "id=data2",
+        "name=data2",
+        "xpath=//*[@id=\"data2\"]",
+        "xpath=//textarea[@id='data2']",
+        "xpath=//textarea",
+        "css=#data2"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=classCChkBox",
+      "Value": "",
+      "Targets": [
+        "name=classCChkBox",
+        "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]/dl/dd/ul/li[2]/input",
+        "xpath=//input[@name='classCChkBox']",
+        "xpath=//li[2]/input",
+        "css=#content > form > table > tbody > tr:nth-child(5) > td:nth-child(1) > div > div.box_content > dl > dd > ul > li:nth-child(2) > input:nth-child(3)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=classDChkBox",
+      "Value": "",
+      "Targets": [
+        "name=classDChkBox",
+        "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]/dl/dd/ul/li[2]/input[2]",
+        "xpath=//input[@name='classDChkBox']",
+        "xpath=//li[2]/input[2]",
+        "css=#content > form > table > tbody > tr:nth-child(5) > td:nth-child(1) > div > div.box_content > dl > dd > ul > li:nth-child(2) > input:nth-child(5)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=mpcdChkBox",
+      "Value": "",
+      "Targets": [
+        "name=mpcdChkBox",
+        "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]/dl/dd/ul/li[2]/input[3]",
+        "xpath=//input[@name='mpcdChkBox']",
+        "xpath=//li[2]/input[3]",
+        "css=#content > form > table > tbody > tr:nth-child(5) > td:nth-child(1) > div > div.box_content > dl > dd > ul > li:nth-child(2) > input:nth-child(7)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=IEC62474ChkBox",
+      "Value": "",
+      "Targets": [
+        "name=IEC62474ChkBox",
+        "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]/dl/dd/ul/li[2]/input[4]",
+        "xpath=//input[@name='IEC62474ChkBox']",
+        "xpath=//li[2]/input[4]",
+        "css=#content > form > table > tbody > tr:nth-child(5) > td:nth-child(1) > div > div.box_content > dl > dd > ul > li:nth-child(2) > input:nth-child(9)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=IEC62474CChkBox",
+      "Value": "",
+      "Targets": [
+        "name=IEC62474CChkBox",
+        "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]/dl/dd/ul/li[2]/input[5]",
+        "xpath=//input[@name='IEC62474CChkBox']",
+        "xpath=//li[2]/input[5]",
+        "css=#content > form > table > tbody > tr:nth-child(5) > td:nth-child(1) > div > div.box_content > dl > dd > ul > li:nth-child(2) > input:nth-child(11)"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"content\"]/form/table/tbody/tr[5]/td/div/div[3]",
+        "xpath=//td/div/div[3]",
+        "css=#content > form > table > tbody > tr:nth-child(5) > td:nth-child(1) > div > div.box_content"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=emailAddress2",
+      "Value": "${!col50}",
+      "Targets": [
+        "id=emailAddress2",
+        "name=emailAddress2",
+        "xpath=//*[@id=\"emailAddress2\"]",
+        "xpath=//input[@id='emailAddress2']",
+        "xpath=//li[4]/input",
+        "css=#emailAddress2"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "selectFrame",
+      "Target": "index=0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"recaptcha-anchor\"]/div",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"recaptcha-anchor\"]/div",
+        "xpath=//span/div",
+        "css=#recaptcha-anchor > div.recaptcha-checkbox-border"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "visualVerify // screenshot 2023-03-08 171427.png",
+      "Value": "STATUSOK",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "if // ${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "selectFrame // xpath=//*[@id=\"rc-imageselect\"]/div[3]/div[2]/div",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "clickAndWait // xpath=//*[@id=\"rc-imageselect\"]/div[3]/div[2]/div/div/div[4]",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "end // ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "store // 20",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "click // id=submitEmailID",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeText // xpath=//*[@id=\"content\"]/form/table/tbody/tr[2]/td/h1",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "store // ${a}",
+      "Value": "!csvline",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "Molex.csv",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "Name": "Siemens",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "festo.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://mall.industry.siemens.com/mall/en/ww/Catalog/Search/?searchTerm=${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "5",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"ProductGrid\"]/tbody/tr/td[3]/div/a/span",
+      "Value": "STATUSOK",
+      "Targets": [
+        "xpath=//*[@id=\"ProductGrid\"]/tbody/tr/td[3]/div/a/span",
+        "xpath=//td[3]/div/a/span",
+        "css=#ProductGrid > tbody > tr:nth-child(1) > td.ProductName > div.Mlfb > a > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"ProductGrid\"]/tbody/tr/td[3]/div/a/span",
+      "Value": "STATUSOK",
+      "Targets": [
+        "xpath=//*[@id=\"ProductGrid\"]/tbody/tr/td[3]/div/a/span",
+        "xpath=//td[3]/div/a/span",
+        "css=#ProductGrid > tbody > tr:nth-child(1) > td.ProductName > div.Mlfb > a > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[4]/span",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[6]/span",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[10]/span",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${c}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "edesave.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

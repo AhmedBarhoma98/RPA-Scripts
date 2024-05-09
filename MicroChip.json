@@ -1,0 +1,101 @@
+{
+  "Name": "MicroChip",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.microchip.com/bin/mchp/rohsinfosearch?search=${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "5",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[6]/span",
+      "Value": "STATUSOK",
+      "Targets": [
+        "xpath=/html/body/div[3]/div[2]/div[2]/div[6]/span",
+        "xpath=//div[6]/span",
+        "css=body > div.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ6.ͼ5 > div.cm-scroller > div.cm-content.cm-lineWrapping > div:nth-child(6) > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[4]/span",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[6]/span",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div[3]/div[2]/div[2]/div[10]/span",
+      "Value": "c",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${c}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "edesave.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

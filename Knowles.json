@@ -1,0 +1,101 @@
+{
+  "Name": "Knowles",
+  "CreationDate": "2024-5-9",
+  "Commands": [
+    {
+      "Command": "csvRead",
+      "Target": "readcsvtestdata.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.knowlescapacitors.com/Tools/SearchParts?PartNumber=${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!col1}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${!col1}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!timeout_wait",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "//*[@id=\"gvData\"]/tbody/tr/td[1]/a",
+      "Value": "STATUSOK",
+      "Targets": [
+        "xpath=//*[@id=\"paraSearch\"]/div[2]/div/a/span[2]",
+        "xpath=//div/a/span[2]",
+        "css=#paraSearch > div.paginationArea.paginationArea_para.parametricPara > div > a > span.responsive-hide"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${!STATUSOK} == true",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "//*[@id=\"gvData\"]/tbody/tr/td[1]/a",
+      "Value": "a",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "//*[@id=\"gvData\"]/tbody/tr/td[6]/p",
+      "Value": "b",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${a}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${b}",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"gvData\"]/tbody/tr/td[5]/a[1]",
+      "Value": "!csvLine",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "7000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "csvSave",
+      "Target": "newark.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
